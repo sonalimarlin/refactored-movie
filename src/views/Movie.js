@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState }from 'react';
 import { Link } from 'react-router-dom';
-// import { connect } from 'react-redux';
-// import { getAllMovies } from '../redux/actions';
 import './movieStyles.scss';
 
 const Movie = (props) => {
+
+    const [hover, setHover] = useState(false);
+
     return (
         <div className="movieBox">
             <div className="posterBox">
@@ -19,7 +20,14 @@ const Movie = (props) => {
                 />
             </div>
             <div className="movieTitle">
-            <Link to={`/movie/${props.movie.imdbId}`}>{props.movie.title}</Link>
+            <Link
+                style={{textDecoration: 'none', color: hover ? '#99E7D0' : 'black'}}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                to={`/${props.movie.imdbId}`}
+            >
+                {props.movie.title}
+            </Link>
             </div>
         </div>
      );

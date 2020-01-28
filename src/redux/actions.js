@@ -12,6 +12,18 @@ export const getAllMovies = () => dispatch => {
       })
 }
 
+export const getFilteredMovies = (q) => dispatch => {
+  MoviesService.getFilteredMovies(q)
+      .then(filteredMovies => {
+        dispatch({
+          type: 'FILTER_MOVIES',
+          payload: {
+            filteredMovies,
+          }
+        })
+      })
+}
+
 export const getMovie = (imdbId) => dispatch => {
   MoviesService.getMovie(imdbId)
       .then(movie => {

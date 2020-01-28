@@ -1,6 +1,5 @@
 const initialState = {
-  movies: [],
-  movie: {}
+  movies: []
 }
 
 export default (state = initialState, action) => {
@@ -8,10 +7,6 @@ export default (state = initialState, action) => {
     case 'ALL_MOVIES_LOADED':
     return {
       movies: action.payload.movies,
-    }
-    case 'GET_MOVIE_DETAIL':
-    return {
-      movie: action.payload.movie,
     }
     default:
     return state

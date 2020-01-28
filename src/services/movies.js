@@ -6,9 +6,12 @@ const MoviesService = {
       }),
   getMovie: (imdbId) => fetch(`http://www.omdbapi.com/?i=${imdbId}&apikey=c32d368e`)
   .then(function(response) {
-    console.log(imdbId, "ID");
     return response.json();
-  })
+  }),
+  getFilteredMovies: (q) => fetch(`http://localhost:3001/movies/search?s=${q}`)
+    .then(function(response) {
+      return response.json();
+    })
 }
 
 export default MoviesService;

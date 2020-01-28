@@ -1,0 +1,61 @@
+input#custom-button{
+    background: #99E7D0;
+    border-radius: 5px;
+    border: 2px gray solid;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+input#custom-button:hover{
+    background: #78C3AD;
+}
+
+.mainDetailContainer {
+    margin: 20px;
+    margin-left: 5%;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 90vw;
+    border: 2px solid lightgrey;
+}
+
+.detailsContainer {
+    padding-left: 50px;
+    text-align: left;
+    flex: 5;
+    flex-wrap: wrap;
+    border: '1px solid blue';
+    height: auto;
+}
+
+.titleRight {
+    float: right;
+    padding-right: 40px;
+}
+
+.movieHeadings {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.lightGraySubText {
+    margin: 0;
+    padding-top: 5px;
+    font-size: 15px;
+    color: lighten(gray, 15%);
+}
+
+.graySubText {
+    margin: 0;
+    padding-top: 5px;
+    font-size: 15px;
+    color: darken(gray, 15%);
+}

@@ -14,9 +14,9 @@ http://www.omdbapi.com/?i=[imdbId]&apikey=c32d368e
 Store details data in the redux store.
 
 ### Acceptance Criteria
-  1. Update the homepage movies list such that clicking a movie title or poster will take the client to a movie detail page.
-      - Add a hover color to the title - #99E7D0
-  2. The movie details view should be served from the route `http://localhost:3000/{id}`.
+  1. Update the homepage movies list such that clicking a movie title or poster will take the client to a movie detail page.: DONE
+      - Add a hover color to the title - #99E7D0: DONE
+  2. The movie details view should be served from the route `http://localhost:3000/{id}`:DONE.
 
   ```
   For example:
@@ -25,13 +25,13 @@ Store details data in the redux store.
     http://localhost:3000/9095
   ```
 
-  3. The view shows the same header as the homepage
-  4. The view shows the poster, title, year, and IMDB rating (out of 10)
-  5. The view shows rated, run time, genre, and release date
-  6. The view shows the plot, directors, writers, actors, and IMDB ID
+  3. The view shows the same header as the homepage: DONE
+  4. The view shows the poster, title, year, and IMDB rating (out of 10): DONE
+  5. The view shows rated, run time, genre, and release date: DONE
+  6. The view shows the plot, directors, writers, actors, and IMDB ID: DONE
   7. There is a "Back To Results" button that takes the user back to homepage
-      - The button should be implemented with HTML/CSS
-      - Add a hover color to the button - #78C3AD
+      - The button should be implemented with HTML/CSS: DONE
+      - Add a hover color to the button - #78C3AD: DONE
       - Use the button designs for reference:
         - [Button](button.png)  
         - [Button - Hover](button_hover.png)  
