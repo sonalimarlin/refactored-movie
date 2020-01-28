@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.app {
+  text-align: left;
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+  height: 75px;
+  background-color: aquamarine;
+  color: darkslategrey;
+  text-align: left;
+  padding-left: 5%;
+  padding-top: 30px;
+  border-bottom: 3px solid mediumseagreen;
+}
+
+.noDecoration {
+  text-decoration: none;
+}
