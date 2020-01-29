@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getMovie } from '../redux/actions';
+import { getMovie, clearMovie } from '../redux/actions';
 import './movieDetailStyles.scss';
 
 class MovieDetail extends Component {
@@ -25,6 +25,7 @@ class MovieDetail extends Component {
         const {movie} = this.props;
         console.log(movie);
         if (movie.Response === "False" || undefined) {
+            clearMovie();
           return <Redirect to={{pathname: "/error"}} />
         }
       }
@@ -84,7 +85,8 @@ const mapStateToProps = state => ({
 })
   
 const mapDispatchToProps = dispatch => ({
-    getMovie: (imdbId) => dispatch(getMovie(imdbId))
+    getMovie: (imdbId) => dispatch(getMovie(imdbId)),
+    clearMovie: () => dispatch(clearMovie())
 })
   
 export default connect(mapStateToProps, mapDispatchToProps)(MovieDetail);

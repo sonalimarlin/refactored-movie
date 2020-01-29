@@ -6,7 +6,11 @@ const initialState = {
     switch (action.type) {
       case 'GET_MOVIE_DETAIL':
       return {
-        movie: action.payload.movie,
+        movie: action.payload.movie
+      }
+      case 'REMOVE_SELECTED_MOVIE':
+      return {
+        movie: action.payload.movie
       }
       default:
       return state

@@ -1,18 +1,22 @@
 import React, {Fragment} from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './errorStyles.scss';
 
-const Error = () =>  (
+const Error = () =>  {
+    const dispatch = useDispatch()
+    return (
     <Fragment>
     <Link to="/">
-        <input type="submit" id="custom-button" value="Back to Results"></input>
+        <input onClick={() => dispatch({type: 'REMOVE_SELECTED_MOVIE', payload: {movie: {}}})} type="submit" id="custom-button" value="Back to Results"></input>
     </Link>
     <div className="errorContainer">
         <h3 className="errorTitle">Oops, something went wrong!</h3>
         <SvgWithXlink />
     </div>
     </Fragment>
-);
+    );
+};
 
 function SvgWithXlink () {
     return (

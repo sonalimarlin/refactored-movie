@@ -35,3 +35,12 @@ export const getMovie = (imdbId) => dispatch => {
         })
       })
 }
+
+export const clearMovie = () => dispatch => {
+  dispatch({
+    type: 'REMOVE_SELECTED_MOVIE',
+    payload: {
+      movie: {}
+    }
+  })
+}
