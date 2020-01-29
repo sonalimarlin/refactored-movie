@@ -7,8 +7,7 @@ import './movieDetailStyles.scss';
 class MovieDetail extends Component {
 
     state = {
-        rating: {},
-        redirect: false
+        rating: {}
     };
 
     componentDidMount() {
@@ -17,14 +16,15 @@ class MovieDetail extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props.movie.Ratings !== prevProps.movie.Ratings) {
+        if (this.props.movie.Ratings !== prevProps.movie.Ratings && this.props.movie.Response !== "False") {
           this.setState({ rating: this.props.movie.Ratings[0]})
         }
       }
     
       renderRedirect = () => {
         const {movie} = this.props;
-        if (movie.Response === "False") {
+        console.log(movie);
+        if (movie.Response === "False" || undefined) {
           return <Redirect to={{pathname: "/error"}} />
         }
       }

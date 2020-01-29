@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-const posterFallBack = require('./poster_placeholder.svg');
+const posterFallBack = require('../assets/poster_placeholder.svg');
 
 class ImageComponent extends Component {
 

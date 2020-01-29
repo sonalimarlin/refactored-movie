@@ -4,7 +4,7 @@ import { getAllMovies, getFilteredMovies } from '../redux/actions';
 import './homeStyles.scss';
 import Movie from './Movie';
 import * as QueryString from "query-string";
-const noResults = require('../components/no_results.svg');
+const noResults = require('../assets/no_results.svg');
 
 class Home extends Component {
 
