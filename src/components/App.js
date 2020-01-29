@@ -34,17 +34,15 @@ class App extends Component {
   render() {
     return (
         <div className="app">
-          <header>
-            <div>
-              <Link to="/" className="noDecoration" alt="The Movie List"><h1 className="title">My Movie DB</h1></Link>
-              <input 
+          <header className="header">
+              <Link to="/" className="linkStyle" alt="The Movie List">My Movie DB</Link>
+              <input
+                className="inputStyle"
                 value={this.state.searchTerm}
                 onChange={this.handleChange}
                 onKeyDown={this.keyPress}
                 type="text"
-                className="searchField"
                 placeholder="Search movies by title" />
-            </div>
           </header>
           {this.renderRedirect()}
           {this.props.children}

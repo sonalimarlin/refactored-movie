@@ -8,18 +8,29 @@ body {
   text-align: left;
 }
 
-.title {
+.header {
   text-align: center;
   margin: 0;
   height: 75px;
   background-color: aquamarine;
-  color: darkslategrey;
   text-align: left;
   padding-left: 5%;
   padding-top: 30px;
   border-bottom: 3px solid mediumseagreen;
+  font-size: 45px;
 }
 
-.noDecoration {
+.linkStyle {
   text-decoration: none;
+  color: darkslategray;
 }
+
+.inputStyle {
+  float: right;
+  height: 25px;
+  width: 200px;
+  margin: 10px;
+  margin-right: 5%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+} 

@@ -13,7 +13,6 @@ class Home extends Component {
 
   componentDidUpdate(prevProps) {
     const params = QueryString.parse(this.props.location.search);
-    console.log(this.props.location.search, prevProps.location.search);
     if (this.props.location.search !== prevProps.location.search) {
       this.props.getFilteredMovies(params.q);
     }
@@ -21,14 +20,15 @@ class Home extends Component {
 
   render() {
     const params = QueryString.parse(this.props.location.search);
-    console.log(this.props);
+    const { filteredMovies } = this.props.filteredMovies;
+    const count = filteredMovies.length;
     return (
       <div className="mainContainer">
       {
-        params.q !== undefined ?
+        params.q !== undefined || "" ?
           (
-          <Fragment><h3 className="containerTitle">All Movies</h3>
-          {this.props.filteredMovies.filteredMovies.map(movie => (
+          <Fragment><h3 className="containerTitle">{count} results for "{params.q}"</h3>
+          {filteredMovies.map(movie => (
               <Movie key={movie.imdbId} movie={movie} />
           ))}
         </Fragment>) 

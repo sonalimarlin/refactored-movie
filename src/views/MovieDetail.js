@@ -1,5 +1,5 @@
 import React, { Fragment, Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getMovie } from '../redux/actions';
 import './movieDetailStyles.scss';
@@ -7,7 +7,8 @@ import './movieDetailStyles.scss';
 class MovieDetail extends Component {
 
     state = {
-        rating: {}
+        rating: {},
+        redirect: false
     };
 
     componentDidMount() {
@@ -17,16 +18,21 @@ class MovieDetail extends Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.movie.Ratings !== prevProps.movie.Ratings) {
-          this.setState({rating: this.props.movie.Ratings[0] })
+          this.setState({ rating: this.props.movie.Ratings[0]})
+        }
+      }
+    
+      renderRedirect = () => {
+        const {movie} = this.props;
+        console.log(movie.Response)
+        if (movie.Response === "False") {
+          return <Redirect to={{pathname: "/error"}} />
         }
       }
 
     render() {
         const { movie } = this.props;
-        console.log(movie);
         const { rating } = this.state;
-        console.log(rating);
-
         const imageStyle = {
             padding: '10px',
             marginTop: '20px',
@@ -47,7 +53,9 @@ class MovieDetail extends Component {
             <Link to="/">
                 <input type="submit" id="custom-button" value="Back to Results"></input>
             </Link>
-            
+
+            {this.renderRedirect()}
+
             <div className="mainDetailContainer">
                 <div style={imageStyle} />
                 <div className="detailsContainer">

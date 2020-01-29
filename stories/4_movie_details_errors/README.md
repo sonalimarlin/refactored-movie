@@ -19,13 +19,13 @@ http://localhost:3001/movies/451
 ```
 
 ### Acceptance Criteria
-1. The view shows the same header as the homepage
+1. The view shows the same header as the homepage: DONE
 2. The view shows an error message
-    - "Oops, something went wrong!"
+    - "Oops, something went wrong!": DONE
 3. An error image is displayed under the error message
-    - [Exclamation](exclamation.svg)
+    - [Exclamation](exclamation.svg): DONE
 4. There is a "Back To Results" button that takes the user back to homepage
-    - The button should be implemented with HTML/CSS
+    - The button should be implemented with HTML/CSS: DONE
     - Add a hover color to the button - #78C3AD
     - Use the button designs for reference:
       - [Button](../2_movie_details/button.png)  

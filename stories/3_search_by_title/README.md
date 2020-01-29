@@ -14,11 +14,11 @@ The search results data for the movie needs to be loaded from the local server A
 
 ### Acceptance Criteria
   1. A text input is added to the header
-      - The placeholder should be "Search movies by title"
-      - Hitting "Enter" performs a search query
-  2. Searching causes the user to navigate to the homepage with the term in a "q" parameter
-  3. The page then loads data from the search endpoint and displays only that movies list
-  4. There is a heading above the movies list that shows the number of results and the search term
+      - The placeholder should be "Search movies by title": DONE
+      - Hitting "Enter" performs a search query: DONE
+  2. Searching causes the user to navigate to the homepage with the term in a "q" parameter: DONE
+  3. The page then loads data from the search endpoint and displays only that movies list: DONE
+  4. There is a heading above the movies list that shows the number of results and the search term: DONE
 
 ### Designs
 [Search By Title](search_by_title.png)
