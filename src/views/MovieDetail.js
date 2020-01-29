@@ -24,7 +24,6 @@ class MovieDetail extends Component {
     
       renderRedirect = () => {
         const {movie} = this.props;
-        console.log(movie.Response)
         if (movie.Response === "False") {
           return <Redirect to={{pathname: "/error"}} />
         }

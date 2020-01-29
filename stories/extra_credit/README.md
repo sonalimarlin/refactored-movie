@@ -3,7 +3,7 @@
 Here are a few extra credit stories:
 
 - If a movie does not have a poster, use a placeholder:
-    - [Poster Placeholder](poster_placeholder.svg)
+    - [Poster Placeholder](poster_placeholder.svg): DONE
 - Make the homepage responsive. Use the mobile view designs:
     - [Homepage](homepage-mobile.png)
     - [Search By Title](search_by_title-mobile.png)

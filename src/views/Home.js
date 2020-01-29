@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { getAllMovies, getFilteredMovies } from '../redux/actions';
 import './homeStyles.scss';
 import Movie from './Movie';
-import * as QueryString from "query-string"
+import * as QueryString from "query-string";
+const noResults = require('../components/no_results.svg');
 
 class Home extends Component {
 
@@ -27,13 +28,14 @@ class Home extends Component {
       {
         params.q !== undefined || "" ?
           (
-          <Fragment><h3 className="containerTitle">{count} results for "{params.q}"</h3>
-          {filteredMovies.map(movie => (
-              <Movie key={movie.imdbId} movie={movie} />
-          ))}
-        </Fragment>) 
-          : 
-          (
+          <Fragment>
+            <h3 className="containerTitle">{count} results for "{params.q}"</h3>
+            {count === 0? <img height="300px" alt="no results" src={noResults} /> : ''}
+            {filteredMovies.map(movie => (
+                <Movie key={movie.imdbId} movie={movie} />
+            ))}
+          </Fragment>
+          ) : (
           <Fragment><h3 className="containerTitle">All Movies</h3>
             {this.props.movies.map(movie => (
                 <Movie key={movie.imdbId} movie={movie} />

@@ -1,5 +1,6 @@
 import React, { useState }from 'react';
 import { Link } from 'react-router-dom';
+import ImageComponent from '../components/ImageComponent';
 import './movieStyles.scss';
 
 const Movie = (props) => {
@@ -9,15 +10,7 @@ const Movie = (props) => {
     return (
         <div className="movieBox">
             <div className="posterBox">
-                <img 
-                    src={props.movie.poster}
-                    alt="movie poster"
-                    height="200px"
-                    position = "absolute"
-                    top="0"
-                    bottom="0"
-                    margin="auto"
-                />
+                <ImageComponent poster={props.movie.poster}/>
             </div>
             <div className="movieTitle">
             <Link
