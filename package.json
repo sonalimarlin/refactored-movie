@@ -17,7 +17,7 @@
     "redux-thunk": "^2.3.0",
     "request": "^2.87.0",
     "sqlite3": "^4.1.0",
-    "validator": "^10.4.0"
+    "validator": "^13.7.0"
   },
   "scripts": {
     "start:client": "react-scripts start",
